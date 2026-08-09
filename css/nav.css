@@ -1,0 +1,36 @@
+.nav{
+  position:fixed; top:0; left:0; right:0; z-index:50;
+  display:flex; align-items:center; gap:24px;
+  padding:12px var(--pad);
+  border-bottom:1px solid transparent;
+  transition:background .3s var(--ease), border-color .3s var(--ease);
+}
+.nav.stuck{ background:rgba(7,5,16,.93); border-bottom-color:var(--line-soft); }
+
+.nav-mark{ display:flex; align-items:center; gap:11px; margin-right:auto; }
+.nav-mark-pic{
+  width:34px; height:34px; display:block;
+  transition:filter .25s;
+}
+.nav-mark-pic img{ width:100%; height:100%; object-fit:contain; }
+.nav-mark:hover .nav-mark-pic{ filter:brightness(1.18); }
+.nav-mark-text{ font-weight:700; font-size:14px; letter-spacing:-.02em; }
+
+.nav-links{ display:flex; gap:24px; }
+.nav-links a{
+  font-size:12px; font-weight:700; letter-spacing:.1em;
+  text-transform:uppercase; color:var(--dim);
+  padding:4px 0; position:relative;
+  transition:color .2s;
+}
+.nav-links a::after{
+  content:''; position:absolute; left:50%; right:50%; bottom:0; height:2px;
+  background:var(--accent); transition:left .32s var(--ease), right .32s var(--ease);
+}
+.nav-links a:hover{ color:var(--star); }
+.nav-links a:hover::after{ left:0; right:0; }
+
+@media (max-width:640px){
+  .nav-mark-text{ display:none; }
+  .nav-links{ gap:15px; }
+}
