@@ -116,7 +116,7 @@ window.Player = (function () {
       document.head.appendChild(s);
       setTimeout(function () {
         if (!(window.YT && window.YT.Player)) drop('timeout');
-      }, 4500);
+      }, 12000);
     });
     return ytApi;
   }

@@ -89,7 +89,7 @@ window.CONFIG = {
     //{ kind: 'file', src: 'assets/videos/demo.mp4', title: 'Sample file', hide: true }
     { kind: 'youtube', id: 'wZ_Ij8HoLvE?si=Bu6gfOZt5U65QRuR', title: 'Voxel Destruction System' },
     { kind: 'youtube', id: 'NpSrq-yCvdU?si=2LuOwsOtDzaIUkkB', title: '2D Platformer' },
-    { kind: 'youtube', id: 'NpSrq-yCvdU?si=2LuOwsOtDzaIUkkB', title: 'Tycoon System' },
+    { kind: 'youtube', id: '9ljFlLH5Ohc?si=w3eLZunyr0dQ9Jhc', title: 'Tycoon System' },
     { kind: 'youtube', id: 'tEPtywsOJ4Q?si=RbvXa87P5G6sXdL0', title: 'Drawing System' },
   ],
 

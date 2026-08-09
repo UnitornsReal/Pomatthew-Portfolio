@@ -51,7 +51,9 @@ videos: [
 ]
 ```
 
-For YouTube the `id` is the part after `?v=`. For a file, drop it in
+For YouTube you can paste whatever YouTube hands you — a bare id, a
+`youtu.be/...?si=...` share link, a full `watch?v=` url, a Shorts link. The
+tracking suffix and everything else gets stripped. For a file, drop it in
 `assets/videos/` and point `src` at it — the card thumbnail is grabbed
 from a frame of the video automatically, or give it a `poster` image.
 
