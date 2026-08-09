@@ -89,7 +89,6 @@
 
     var body = el('div', 'vid-body');
     body.appendChild(el('h3', null, item.title || 'Untitled'));
-    if (item.desc) body.appendChild(el('p', null, item.desc));
     if (item.tags && item.tags.length) {
       var tw = el('div', 'vid-tags');
       item.tags.forEach(function (t) { tw.appendChild(el('b', null, t)); });

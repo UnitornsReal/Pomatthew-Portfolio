@@ -85,12 +85,10 @@ window.CONFIG = {
   ],
 
   videos: [
-    //{ kind: 'youtube', id: 'aqz-KE-bpKQ', title: 'Sample clip', hide: true },
-    //{ kind: 'file', src: 'assets/videos/demo.mp4', title: 'Sample file', hide: true }
-    { kind: 'youtube', id: 'wZ_Ij8HoLvE?si=Bu6gfOZt5U65QRuR', title: 'Voxel Destruction System' },
-    { kind: 'youtube', id: 'NpSrq-yCvdU?si=2LuOwsOtDzaIUkkB', title: '2D Platformer' },
-    { kind: 'youtube', id: '9ljFlLH5Ohc?si=w3eLZunyr0dQ9Jhc', title: 'Tycoon System' },
-    { kind: 'youtube', id: 'tEPtywsOJ4Q?si=RbvXa87P5G6sXdL0', title: 'Drawing System' },
+    { kind: 'youtube', id: 'wZ_Ij8HoLvE?si=Bu6gfOZt5U65QRuR', title: 'Voxel Destruction System', desc: 'This is my voxel destruction system, it uses a subdivision logic that divides parts recursively. Instead of creating new parts during the division process, I hold the information in an array/table. Once the recursion process is complete, I retrieve new parts from a part cache/pool. Additionally, I replicate the destruction effects to each client, which results in a cleaner visual effect and reduces the load on the server.' },
+    { kind: 'youtube', id: 'NpSrq-yCvdU?si=2LuOwsOtDzaIUkkB', title: '2D Platformer', desc: `This is a 2D platformer I developed using Roblox's GUI components, without relying on any external libraries or frameworks. I implemented the physics and collision detection on my own using AABB (Axis-Aligned Bounding Box)` },
+    { kind: 'youtube', id: '9ljFlLH5Ohc?si=w3eLZunyr0dQ9Jhc', title: 'Tycoon System', desc: 'This is my Tycoon system. I had planned to create a tycoon game but never followed through with the idea, so the system is just here!' },
+    { kind: 'youtube', id: 'tEPtywsOJ4Q?si=RbvXa87P5G6sXdL0', title: 'Drawing System', desc: 'This video shows my custom drawing system made in Roblox. The system includes free drawing with a color wheel for selecting custom colors, a color dropper tool to pick existing colors from the canvas, and a line tool for precise straight lines. It also has a fill tool that I made by utilizing a flood fill algorithm which allows users to fill enclosed areas with an adjustable tolerance. It also has an eraser tool for easy corrections along with a brush thickness slider to control stroke width and a fill tolerance slider to fine tune the behavior of the fill tool.'},
   ],
 
   contact: {
