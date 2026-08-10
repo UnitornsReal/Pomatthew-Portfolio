@@ -108,6 +108,8 @@ window.CONFIG = {
     proxies: ['roproxy.com', 'rotunnel.com'],
     refreshSeconds: 60,
     defaultGameView: 'globe',
-    starCount: 460
+    starCount: 460,
+    maxPixelRatio: 1.5,
+    nebula: true
   }
 };

@@ -121,7 +121,6 @@
 .skills{
   margin-top:36px;
   padding-top:24px;
-  border-top:1px solid var(--line-soft);
 }
 .skills-label{
   font-size:12px; font-weight:700; letter-spacing:.12em;

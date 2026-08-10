@@ -22,10 +22,13 @@ window.Globe = (function () {
 
     this.dragging = false;
     this.running = false;
+    this.want = false;
+    this.onScreen = true;
     this.spawn = 0;
     this.raf = null;
 
     this._bind();
+    this._watch();
   }
 
   Globe.prototype.setItems = function (els, keep) {
@@ -94,7 +97,9 @@ window.Globe = (function () {
                          (y2 * this.ry * e).toFixed(2) + 'px,' +
                          (z2 * this.rz * e).toFixed(2) + 'px)';
       it.el.style.opacity = op.toFixed(3);
-      it.el.style.pointerEvents = z2 < -0.08 ? 'none' : 'auto';
+
+      var hit = z2 < -0.08 ? 'none' : 'auto';
+      if (it.hit !== hit) { it.el.style.pointerEvents = hit; it.hit = hit; }
     }
   };
 
@@ -182,17 +187,36 @@ window.Globe = (function () {
     });
   };
 
-  Globe.prototype.start = function () {
-    if (this.running) return;
+  Globe.prototype._watch = function () {
+    var self = this;
+    if (!window.IntersectionObserver) return;
+    new IntersectionObserver(function (rows) {
+      self.onScreen = rows[0].isIntersecting;
+      if (self.onScreen) self._run(); else self._halt();
+    }, { rootMargin: '120px' }).observe(this.stage);
+  };
+
+  Globe.prototype._run = function () {
+    if (this.running || !this.want || !this.onScreen) return;
     this.running = true;
     this.measure();
     this.raf = requestAnimationFrame(this._tick.bind(this));
   };
 
-  Globe.prototype.stop = function () {
+  Globe.prototype._halt = function () {
     this.running = false;
     if (this.raf) cancelAnimationFrame(this.raf);
     this.raf = null;
+  };
+
+  Globe.prototype.start = function () {
+    this.want = true;
+    this._run();
+  };
+
+  Globe.prototype.stop = function () {
+    this.want = false;
+    this._halt();
   };
 
   Globe.prototype.replay = function () { this.spawn = 0; };
