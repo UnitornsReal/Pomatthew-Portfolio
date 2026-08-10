@@ -170,7 +170,7 @@
 }
 .view-toggle button + button{ border-left:1px solid var(--line); }
 .view-toggle button:hover{ color:var(--star); }
-.view-toggle button.on{ color:var(--void); background:var(--accent); }
+.view-toggle button.on{ color:var(--mid); background:var(--accent); }
 
 .games-error{
   border:1px solid rgba(255,90,90,.3);

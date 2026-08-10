@@ -5,6 +5,7 @@
   --panel-hi:  #181330;
   --line:      #29204c;
   --line-soft: #1c1636;
+  --line-hi:   #3d3170;
 
   --plasma:    #9b3cd3;
   --plasma-lo: #4723a9;
@@ -12,11 +13,11 @@
   --amber:     #ffb648;
   --accent:    #e0664a;
 
-  --star:  #f4eeff;
-  --mid:   #cdc2ed;
-  --dim:   #aa9dd2;
-  --faint: #aa9dd2;
-  --ghost: #8f82bc;
+  --star:  #f7f4ff;
+  --mid:   #e2ddf0;
+  --dim:   #cac3da;
+  --faint: #c0b8d1;
+  --ghost: #aaa1c0;
 
   --mono: 'JetBrains Mono', ui-monospace, 'Cascadia Mono', Consolas, monospace;
   --sans: var(--mono);
@@ -57,7 +58,7 @@ code{
   padding:1px 5px;
 }
 
-::selection{ background:var(--accent); color:var(--void); }
+::selection{ background:var(--accent); color:var(--mid); }
 :focus-visible{ outline:2px solid var(--accent); outline-offset:3px; }
 
 .wrap{ width:min(1180px, 100% - var(--pad)*2); margin-inline:auto; }
@@ -65,7 +66,7 @@ code{
 .micro{
   font-size:12px; font-weight:700;
   letter-spacing:.1em; text-transform:uppercase;
-  color:var(--dim); margin-bottom:12px;
+  color:var(--mid); margin-bottom:12px;
 }
 
 #sky{ position:fixed; inset:0; width:100%; height:100%; z-index:0; pointer-events:none; }

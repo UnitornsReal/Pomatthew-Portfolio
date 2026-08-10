@@ -320,7 +320,10 @@
         status.textContent = 'Sent. I\'ll get back to you.';
         form.reset();
       })
-      .catch(function () {
+      .catch(function (err) {
+        if (window.console && console.warn) {
+          console.warn('Contact form: ' + ((err && err.message) || 'send failed'));
+        }
         status.className = 'form-status no';
         status.innerHTML =
           'Couldn\'t send that. <a href="' + mailtoLink(v) + '">Open it in your mail app instead</a> ' +

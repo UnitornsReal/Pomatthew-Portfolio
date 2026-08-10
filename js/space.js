@@ -57,14 +57,21 @@
     nebCtx.clearRect(0, 0, w, h);
     nebCtx.globalCompositeOperation = 'lighter';
 
+    // frame() tiles this texture vertically, so every cloud is also drawn one
+    // height above and below. That wraps each gradient across the top and bottom
+    // edges and leaves no seam where the tiles meet.
     CLOUDS.forEach(function (b) {
       var cx = b.x * w, cy = b.y * h, r = b.r * Math.max(w, h) * .5;
-      var g = nebCtx.createRadialGradient(cx, cy, 0, cx, cy, r);
-      g.addColorStop(0,   'rgba(' + b.c.join(',') + ',' + b.a + ')');
-      g.addColorStop(.42, 'rgba(' + b.c.join(',') + ',' + (b.a * .34).toFixed(3) + ')');
-      g.addColorStop(1,   'rgba(' + b.c.join(',') + ',0)');
-      nebCtx.fillStyle = g;
-      nebCtx.fillRect(0, 0, w, h);
+      for (var k = -1; k <= 1; k++) {
+        var y = cy + k * h;
+        if (y + r < 0 || y - r > h) continue;
+        var g = nebCtx.createRadialGradient(cx, y, 0, cx, y, r);
+        g.addColorStop(0,   'rgba(' + b.c.join(',') + ',' + b.a + ')');
+        g.addColorStop(.42, 'rgba(' + b.c.join(',') + ',' + (b.a * .34).toFixed(3) + ')');
+        g.addColorStop(1,   'rgba(' + b.c.join(',') + ',0)');
+        nebCtx.fillStyle = g;
+        nebCtx.fillRect(0, 0, w, h);
+      }
     });
 
     nebCtx.globalCompositeOperation = 'source-over';

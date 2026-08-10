@@ -21,7 +21,7 @@
   cursor:pointer;
   transition:background-size .34s var(--ease), color .25s, border-color .25s;
 }
-.mail-copy:hover{ background-size:100% 100%; color:var(--void); border-color:var(--accent); }
+.mail-copy:hover{ background-size:100% 100%; color:var(--star); border-color:var(--accent); }
 
 .social-row{ display:flex; gap:9px; flex-wrap:wrap; }
 .social{
@@ -38,7 +38,7 @@
 }
 .social:hover{
   background-size:100% 100%;
-  color:var(--void); border-color:var(--accent);
+  color:var(--star); border-color:var(--accent);
 }
 .social.unset{
   border-style:dashed; color:var(--ghost);

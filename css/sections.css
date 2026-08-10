@@ -7,11 +7,11 @@
 .sec-head h2{ font-size:clamp(34px,5.2vw,56px); font-weight:800; letter-spacing:-.055em; }
 .sec-rule{
   flex:1; height:1px; min-width:30px;
-  background:linear-gradient(90deg, var(--line), transparent);
+  background:var(--line-hi);
   transform:translateY(-6px);
 }
 .sec-count{
-  font-size:12px; font-weight:500; color:var(--dim);
+  font-size:12px; font-weight:500; color:var(--mid);
   letter-spacing:.18em; text-transform:uppercase;
   white-space:nowrap;
 }
