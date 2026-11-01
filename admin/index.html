@@ -169,9 +169,6 @@ html{ color-scheme:dark; }
 
 .gate{ min-height:100vh; display:grid; place-items:center; padding:96px 0 48px; }
 .gate .contact-form{ width:min(560px, 100%); }
-.gate ol{ margin:0 0 24px; padding-left:20px; color:var(--mid); font-size:13px; line-height:1.85; }
-.gate ol b{ color:var(--star); }
-.gate ol a{ color:var(--accent); text-decoration:underline; text-underline-offset:3px; }
 .gate .form-status{ margin-top:12px; }
 
 .loading{ min-height:100vh; display:grid; place-items:center; text-align:center; }
@@ -745,15 +742,7 @@ html{ color-scheme:dark; }
       }
     }, [
       secHead('Admin'),
-      h('p', { class: 'contact-blurb', text: 'Sign in with a GitHub token so this page can publish to your site. It stays saved in this browser only.' }),
-      h('ol', null, [
-        h('li', null, ['Open ', h('a', { href: 'https://github.com/settings/personal-access-tokens/new', target: '_blank', rel: 'noopener', text: 'new fine-grained token' }), ' on GitHub.']),
-        h('li', null, ['Name it anything, pick an expiration.']),
-        h('li', null, ['Repository access: ', h('b', { text: 'Only select repositories' }), ' → ', h('b', { text: 'Pomatthew-Portfolio' }), '.']),
-        h('li', null, ['Permissions: ', h('b', { text: 'Contents' }), ' read and write, ', h('b', { text: 'Actions' }), ' read-only.']),
-        h('li', null, ['Generate, copy, paste below.'])
-      ]),
-      field('GitHub token', tok),
+      field('Token', tok),
       h('div', { class: 'form-foot' }, [go]),
       err
     ]);
