@@ -8,8 +8,7 @@ config.js           >>> the only file you need to edit <<<
 css/*.css           styles, split by section
 js/space.js         starfield + nebula background
 js/roblox.js        Roblox API layer (proxies, batching, caching)
-js/globe.js         the draggable sphere of cards
-js/games.js         Games section
+js/games.js         Games section (showcase + scrolling row)
 js/player.js        video player (HTML5 + YouTube behind one UI)
 js/media.js         Projects section
 js/main.js          hero, skills, socials, contact form
@@ -108,8 +107,7 @@ options: { proxies: ['roproxy.com', 'rotunnel.com'] }
 
 They're tried in order and the first one that answers gets remembered for
 the rest of the session. If one is having a bad day the other covers it;
-if both are down, the cards still render with your own text and a note
-explaining why the numbers are missing.
+if both are down, the Games section says it couldn't reach Roblox.
 
 Requests are batched into a single call for all your games, and icons are
 cached for a day. Live player counts re-poll every 60s
@@ -163,5 +161,3 @@ then open <http://localhost:8000>.
 
 Double-clicking the left or right edge of the video skips 10s; double
 clicking the middle goes fullscreen.
-
-Elsewhere on the page, `G` flips the games between globe and grid.

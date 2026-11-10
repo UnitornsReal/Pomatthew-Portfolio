@@ -11,7 +11,6 @@ window.CONFIG = {
   },
 
   skills: [
-    'Roblox',
     'Roblox Studio',
     'Knit',
     'Luau',
@@ -113,7 +112,7 @@ window.CONFIG = {
   contact: {
     to: 'mattleep14@gmail.com',
     mode: 'formsubmit',
-    blurb: 'Contact me for buisness inquiries here, Im available to any position or task.'
+    blurb: 'If you need a programmer for your game, send me a message here or email me.'
   },
 
   socials: {
